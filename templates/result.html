@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+  </head>
+  <body>
+
+    <h1>Result</h1>
+        <p>{{person_age}}</p>
+        <p>{{prediction}}</p>
+
+    <a href="{% url 'home' %}">Allez vers HOME</a>
+
+  <script type="text/javascript" src="{% static 'main.js' %}"></script>
+
+  </body>
+</html>

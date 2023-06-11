@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+  </head>
+  <body>
+
+    <h1>Home page</h1>
+    <h3>Get the Titanic prediction</h3>
+    <p>Enter les détails of a made up person on the titanic voyage</p>
+    <p>We will output a prediction!</p>
+
+    <form  action="{% url 'result' %}" method="post">
+      {% csrf_token %}
+
+      <p>pclass</p>
+      <input type="text" name="pclass" value="1">
+      <p>sex</p>
+      <input type="text" name="sex" value="1">
+      <p>age</p>
+      <input type="text" name="age" value="11">
+      <p>sibsp</p>
+      <input type="text" name="sibsp" value="1">
+      <p>parch</p>
+      <input type="text" name="parch" value="1">
+      <p>fare</p>
+      <input type="text" name="fare" value="19">
+      <p>embarked</p>
+      <input type="text" name="embarked" value="1">
+      <p>title</p>
+      <input type="text" name="title" value="1">
+
+      <input type="submit" value="Submit">
+    </form>
+
+  <script type="text/javascript" src="{% static 'main.js' %}"></script>
+
+  </body>
+</html>
